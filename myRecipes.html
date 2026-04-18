@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Recipes | HerBite</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body class="user-page header-admin">
+
+  <div class="page">
+
+   
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="home-link" aria-label="Go to home">
+          <img src="home.PNG" alt="Home">
+        </a>
+        <div class="brand">
+          <img src="logo.jpg" alt="HerBite Logo">
+        </div>
+        <div class="brand-title">
+          <img src="title.jpg" alt="HerBite Title">
+        </div>
+                <div class="header-right">
+          <div class="welcome">Welcome <span class="name">Joud</span></div>
+        </div>
+        <div class="logout">
+          <a href="index.html">Sign-out</a>
+        </div>
+      </div>
+    </header>
+
+
+   
+    <main class="page-main">
+
+      <section class="box mr-wrap">
+        <div class="mr-head">
+          <div>
+            <h2 class="mr-title">My Recipes</h2>
+            <p class="mr-sub">View and manage the recipes you added.</p>
+          </div>
+
+          <a href="addRecipe.html" class="mr-add">+ Add New Recipe</a>
+        </div>
+
+        <div class="mr-card">
+          <div class="mr-card-top">
+            <h3>Your Added Recipes</h3>
+           
+          </div>
+
+          <div class="mr-table-scroll">
+            <table class="mr-table">
+              <thead>
+                <tr>
+                  <th>Recipe</th>
+                  <th>Ingredients</th>
+                  <th>Instructions</th>
+                  <th>Video</th>
+                  <th>Likes</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <!-- RECIPE 1 -->
+                <tr>
+                  <td>
+                    <a class="mr-recipe" href="viewRecipes.html">
+                      <span class="mr-thumb">
+                        <img src="Greek.JPG" alt="Greek Yoghurt Bowl">
+                      </span>
+
+                      <span class="mr-meta">
+                        <span class="mr-name">Greek Yoghurt Bowl</span>
+                        <span class="mr-cat">Category: Breakfast</span>
+                      </span>
+                    </a>
+                  </td>
+
+                  <td>
+                    <ul class="mr-list">
+                      <li>Greek yoghurt — 1 cup</li>
+                      <li>Mixed berries — ½ cup</li>
+                      <li>Chia seeds — 1 tsp</li>
+                      <li>Honey — 1 tsp</li>
+                    </ul>
+                  </td>
+
+                  <td>
+                    <ol class="mr-list">
+                      <li>Add yoghurt to bowl.</li>
+                      <li>Add fruits.</li>
+                      <li>Sprinkle chia.</li>
+                      <li>Drizzle honey.</li>
+                    </ol>
+                  </td>
+
+                  <td class="mr-muted">No video for recipe</td>
+                  <td><span class="mr-pill">72</span></td>
+                  <td><a class="mr-btn mr-btn-edit" href="editRecipe.html">Edit</a></td>
+                  <td><a class="mr-btn mr-btn-del" href="myRecipes.html">Delete</a></td>
+                </tr>
+
+                <!-- RECIPE 2 -->
+                <tr>
+                  <td>
+                    <a class="mr-recipe" href="viewRecipes.html">
+                      <span class="mr-thumb">
+                        <img src="avocado toast.jpeg" alt="Avocado Glow Toast">
+                      </span>
+
+                      <span class="mr-meta">
+                        <span class="mr-name">Avocado Glow Toast</span>
+                        <span class="mr-cat">Category: Outer Glow</span>
+                      </span>
+                    </a>
+                  </td>
+
+                  <td>
+                    <ul class="mr-list">
+                      <li>Whole grain toast — 1 slice</li>
+                      <li>Avocado — ½</li>
+                      <li>Olive oil — few drops</li>
+                      <li>Chili flakes — pinch</li>
+                    </ul>
+                  </td>
+
+                  <td>
+                    <ol class="mr-list">
+                      <li>Toast the bread.</li>
+                      <li>Mash avocado.</li>
+                      <li>Spread & season.</li>
+                    </ol>
+                  </td>
+
+                  <td><a class="mr-link" href="https://youtu.be/dP6btliLGy4?si=XLxj9FWKNguTYf3l">Watch video</a></td>
+                  <td><span class="mr-pill">61</span></td>
+                  <td><a class="mr-btn mr-btn-edit" href="editRecipe.html">Edit</a></td>
+                  <td><a class="mr-btn mr-btn-del" href="myRecipes.html">Delete</a></td>
+                </tr>
+             <!-- RECIPE 3 -->
+<tr>
+  <td>
+    <a class="mr-recipe" href="viewRecipes.html">
+      <span class="mr-thumb">
+        <img src="banana oat cookies.jpeg" alt="Banana Oat Energy Cookies">
+      </span>
+
+      <span class="mr-meta">
+        <span class="mr-name">Banana Oat Energy Cookies</span>
+        <span class="mr-cat">Category: Healthy Snacks</span>
+      </span>
+    </a>
+  </td>
+
+  <td>
+    <ul class="mr-list">
+      <li>Banana — 1 mashed</li>
+      <li>Oats — 1 cup</li>
+      <li>Honey — 1 tbsp</li>
+      <li>Dark chocolate chips — 1 tbsp</li>
+    </ul>
+  </td>
+
+  <td>
+    <ol class="mr-list">
+      <li>Mix all ingredients in a bowl.</li>
+      <li>Shape into small cookies.</li>
+      <li>Bake for 12 minutes.</li>
+    </ol>
+  </td>
+
+  <td class="mr-muted">No video for recipe</td>
+
+  <td><span class="mr-pill">36</span></td>
+
+  <td><a class="mr-btn mr-btn-edit" href="editRecipe.html">Edit</a></td>
+
+  <td><a class="mr-btn mr-btn-del" href="myRecipes.html">Delete</a></td>
+</tr>
+
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <p>Healthy Recipes</p>
+          <p>Quick Meals</p>
+          <p>Balanced Plates</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Locations</h4>
+          <p>Riyadh</p>
+          <p>Jeddah</p>
+          <p>Dammam</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>+966 5X XXX XXXX</p>
+          <p>herbite@email.com</p>
+          <p>@HerBite</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 HerBite. All rights reserved.
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

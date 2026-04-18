@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Recipe | HerBite</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body class="user-page header-admin">
+  <div class="page">
+
+   
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="home-link" aria-label="Go to home">
+          <img src="home.PNG" alt="Home">
+        </a>
+        <div class="brand"><img src="logo.jpg" alt="HerBite Logo"></div>
+        <div class="brand-title"><img src="title.jpg" alt="HerBite Title"></div>
+                <div class="header-right">
+          <div class="welcome">Welcome <span class="name">Joud</span></div>
+        </div>
+        <div class="logout"><a href="index.html">Sign-out</a></div>
+      </div>
+    </header>
+
+    <main class="page-main">
+
+      <div class="ar-page-head">
+        <div>
+          <h1 class="ar-h1">Add New Recipe</h1>
+          <p class="ar-p">Complete the steps below to add your recipe.</p>
+        </div>
+
+        <a class="ar-back" href="myRecipes.html">← Back</a>
+      </div>
+
+      <section class="ar-card">
+        <div class="ar-card-top">
+          <h2 class="ar-card-title">Recipe Form</h2>
+          <div class="ar-card-sub">Step-by-step</div>
+        </div>
+
+        <div class="ar-card-body">
+
+          
+          <div class="ar-tabs" role="tablist" aria-label="Recipe steps">
+            <button type="button" class="ar-tab is-active" data-step="0">1. Basic Info</button>
+            <button type="button" class="ar-tab" data-step="1">2. Ingredients</button>
+            <button type="button" class="ar-tab" data-step="2">3. Instructions</button>
+            <button type="button" class="ar-tab" data-step="3">4. Video</button>
+          </div>
+
+          <form id="addRecipeForm" action="myRecipes.html" novalidate>
+
+            <!-- STEP 1 -->
+            <div class="ar-step is-active" data-step="0">
+              <div class="ar-grid2">
+                <div>
+                  <label class="ar-label">Recipe Name</label>
+                  <input class="ar-input" type="text" placeholder="e.g., Healthy Chicken Salad" required>
+                </div>
+
+                <div>
+                  <label class="ar-label">Category</label>
+                  <select class="ar-input" required>
+                    <option value="" selected disabled>Select category</option>
+                    <option>Breakfast</option>
+                    <option>Lunch</option>
+                    <option>Dinner</option>
+                    <option>Healthy Snacks</option>
+                  </select>
+                </div>
+              </div>
+
+              <label class="ar-label">Description</label>
+              <textarea class="ar-textarea" placeholder="Short description..." required></textarea>
+
+              <label class="ar-label">Recipe Photo</label>
+              <input class="ar-input" type="file" accept="image/*" required>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="ar-step" data-step="1">
+              <div class="ar-section-title">Ingredients</div>
+
+              <div id="ingredientsWrap" class="ar-repeat">
+                <div class="ar-row">
+                  <div>
+                    <label class="ar-mini">Ingredient Name</label>
+                    <input class="ar-input" type="text" required>
+                  </div>
+                  <div>
+                    <label class="ar-mini">Quantity</label>
+                    <input class="ar-input" type="text" required>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="ar-add" id="addIngredientBtn">+ Add another ingredient</button>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="ar-step" data-step="2">
+              <div class="ar-section-title">Instructions</div>
+
+              <div id="stepsWrap" class="ar-repeat">
+                <div class="ar-row1">
+                  <label class="ar-mini">Step 1</label>
+                  <input class="ar-input" type="text" required>
+                </div>
+              </div>
+
+              <button type="button" class="ar-add" id="addStepBtn">+ Add another step</button>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="ar-step" data-step="3">
+              <div class="ar-section-title">Video (Optional)</div>
+
+              <label class="ar-label">Upload Video</label>
+              <input class="ar-input" type="file" accept="video/*">
+
+              <label class="ar-label">OR Video URL</label>
+              <input class="ar-input" type="url" placeholder="https://...">
+            </div>
+
+            
+            <div class="ar-actions">
+              <button type="button" class="ar-btn ar-btn-ghost" id="prevBtn" disabled>Previous</button>
+
+              <div class="ar-actions-right">
+                <button type="button" class="ar-btn ar-btn-primary" id="nextBtn">Next</button>
+                <button type="submit" class="ar-btn ar-btn-primary" id="submitBtn">Submit</button>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <p>Healthy Recipes</p>
+          <p>Quick Meals</p>
+          <p>Balanced Plates</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Locations</h4>
+          <p>Riyadh</p>
+          <p>Jeddah</p>
+          <p>Dammam</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>+966 5X XXX XXXX</p>
+          <p>herbite@email.com</p>
+          <p>@HerBite</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 HerBite. All rights reserved.
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="Script.js"></script>
+</body>
+</html>

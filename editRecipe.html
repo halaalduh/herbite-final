@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Recipe | HerBite</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  
+  <script src="Script.js" defer></script>
+</head>
+
+<body class="user-page header-admin">
+  <div class="page">
+
+   
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="home-link" aria-label="Go to home">
+          <img src="home.PNG" alt="Home">
+        </a>
+        <div class="brand"><img src="logo.jpg" alt="HerBite Logo"></div>
+        <div class="brand-title"><img src="title.jpg" alt="HerBite Title"></div>
+                <div class="header-right">
+          <div class="welcome">Welcome <span class="name">Joud</span></div>
+        </div>
+        <div class="logout"><a href="index.html">Sign-out</a></div>
+      </div>
+    </header>
+
+    <main class="page-main">
+
+      <div class="er-page-head">
+        <div>
+          <h1 class="er-h1">Edit Recipe</h1>
+          <p class="er-p">Update the steps below to edit your recipe.</p>
+        </div>
+
+        <a class="er-back" href="myRecipes.html">← Back</a>
+      </div>
+
+      <section class="er-card">
+        <div class="er-card-top">
+          <h2 class="er-card-title">Recipe Form</h2>
+          <div class="er-card-sub"> </div>
+        </div>
+
+        <div class="er-card-body">
+
+          <!-- Tabs -->
+          <div class="er-tabs" role="tablist" aria-label="Recipe steps">
+            <button type="button" class="er-tab is-active" data-step="0">1. Basic Info</button>
+            <button type="button" class="er-tab" data-step="1">2. Ingredients</button>
+            <button type="button" class="er-tab" data-step="2">3. Instructions</button>
+            <button type="button" class="er-tab" data-step="3">4. Video</button>
+          </div>
+
+          <form id="editRecipeForm" action="myRecipes.html">
+
+            <!-- STEP 1 -->
+            <div class="er-step is-active" data-step="0">
+              <div class="er-grid2">
+                <div>
+                  <label class="er-label">Recipe Name</label>
+                  <input class="er-input" type="text" value="Avocado Glow Toast" required>
+                </div>
+
+                <div>
+                  <label class="er-label">Category</label>
+                  <select class="er-input" required>
+                    <option>Breakfast</option>
+                    <option>Lunch</option>
+                    <option>Dinner</option>
+                    <option selected>Outer Glow</option>
+                    <option>Healthy Snacks</option>
+                  </select>
+                </div>
+              </div>
+
+              <label class="er-label">Description</label>
+              <textarea class="er-textarea" required>Quick avocado toast for a healthy glow.</textarea>
+
+              <div class="er-current">
+                <div class="er-current-box">
+                  <div class="er-current-title">Current Photo</div>
+                  <img class="er-current-img" src="avocado toast.jpeg" alt="Current photo">
+                </div>
+
+                <div class="er-current-box">
+                  <div class="er-current-title">Change Photo</div>
+                  <input class="er-input" type="file" accept="image/*">
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="er-step" data-step="1">
+              <div class="er-section-title">Ingredients</div>
+
+              <div id="ingredientsWrap" class="er-repeat">
+
+                <div class="er-row">
+                  <div>
+                    <label class="er-mini">Ingredient Name</label>
+                    <input class="er-input" type="text" value="Whole grain toast" required>
+                  </div>
+                  <div>
+                    <label class="er-mini">Quantity</label>
+                    <input class="er-input" type="text" value="1 slice" required>
+                  </div>
+                </div>
+
+                <div class="er-row">
+                  <div>
+                    <label class="er-mini">Ingredient Name</label>
+                    <input class="er-input" type="text" value="Avocado" required>
+                  </div>
+                  <div>
+                    <label class="er-mini">Quantity</label>
+                    <input class="er-input" type="text" value="1/2" required>
+                  </div>
+                </div>
+
+                <div class="er-row">
+                  <div>
+                    <label class="er-mini">Ingredient Name</label>
+                    <input class="er-input" type="text" value="Olive oil" required>
+                  </div>
+                  <div>
+                    <label class="er-mini">Quantity</label>
+                    <input class="er-input" type="text" value="few drops" required>
+                  </div>
+                </div>
+
+              </div>
+
+              <button type="button" class="er-add" id="addIngredientBtn">+ Add another ingredient</button>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="er-step" data-step="2">
+              <div class="er-section-title">Instructions</div>
+
+              <div id="stepsWrap" class="er-repeat">
+
+                <div class="er-row1">
+                  <label class="er-mini">Step 1</label>
+                  <input class="er-input" type="text" value="Toast the bread." required>
+                </div>
+
+                <div class="er-row1">
+                  <label class="er-mini">Step 2</label>
+                  <input class="er-input" type="text" value="Mash avocado." required>
+                </div>
+
+                <div class="er-row1">
+                  <label class="er-mini">Step 3</label>
+                  <input class="er-input" type="text" value="Spread & season." required>
+                </div>
+
+              </div>
+
+              <button type="button" class="er-add" id="addStepBtn">+ Add another step</button>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="er-step" data-step="3">
+              <div class="er-section-title">Video (Optional)</div>
+
+              <div class="er-current">
+                <div class="er-current-box">
+                  <div class="er-current-title">Current Video</div>
+                  <div class="er-muted">No video for recipe</div>
+                </div>
+
+                <div class="er-current-box">
+                  <div class="er-current-title">Upload Video</div>
+                  <input class="er-input" type="file" accept="video/*">
+                </div>
+              </div>
+              
+              <label class="er-label">OR Video URL</label>
+              <input class="er-input" type="url" placeholder="https://..." value="">
+            </div>
+
+            
+            <div class="er-actions">
+              <button type="button" class="er-btn er-btn-ghost" id="prevBtn" disabled>Previous</button>
+
+              <div class="er-actions-right">
+                <button type="button" class="er-btn er-btn-primary" id="nextBtn">Next</button>
+                <button type="submit" class="er-btn er-btn-primary" id="submitBtn">Update</button>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <p>Healthy Recipes</p>
+          <p>Quick Meals</p>
+          <p>Balanced Plates</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Locations</h4>
+          <p>Riyadh</p>
+          <p>Jeddah</p>
+          <p>Dammam</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>+966 5X XXX XXXX</p>
+          <p>herbite@email.com</p>
+          <p>@HerBite</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 HerBite. All rights reserved.
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
