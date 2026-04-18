@@ -18,14 +18,12 @@ if ($checkUser->num_rows > 0 || $checkBlocked->num_rows > 0) {
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 $photoFileName = "default.png";
 
-$idResult = $conn->query("SELECT COALESCE(MAX(id), 0) + 1 AS nextId FROM users");
-$nextIdRow = $idResult->fetch_assoc();
-$newUserId = (int) $nextIdRow['nextId'];
-
-$sql = "INSERT INTO users (id, userType, firstName, lastName, emailAddress, password, photoFileName)
-        VALUES ($newUserId, 'user', '$firstName', '$lastName', '$email', '$hashedPassword', '$photoFileName')";
+$sql = "INSERT INTO users (userType, firstName, lastName, emailAddress, password, photoFileName)
+        VALUES ('user', '$firstName', '$lastName', '$email', '$hashedPassword', '$photoFileName')";
 
 if ($conn->query($sql) === TRUE) {
+    $newUserId = $conn->insert_id;
+
     if (isset($_FILES['profileImg']) && $_FILES['profileImg']['error'] == 0) {
 
     $originalName = basename($_FILES['profileImg']['name']);
@@ -47,3 +45,4 @@ if ($conn->query($sql) === TRUE) {
     die("sql error: " . $conn->error);
 }
 ?>
+
